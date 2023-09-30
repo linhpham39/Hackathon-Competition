@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans");
+.childLoginContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.emptyContainer {
+    width: 100%;
+    height: 10%;
+}
+.title {
+    margin-left: 26px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+}
+
+.subTitle {
+    margin-top: 20px;
+    margin-left: 26px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Public Sans", sans-serif;
+    color: #979797;
+}
+
+.inputContainer {
+    margin-top: 25px;
+    margin-left: 26px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer .inputTitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+    color: black;
+}
+
+.inputContainer .iconContainer {
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #9797971f;
+    padding: 15px;   
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer .iconContainer .icon {
+    width: 20px;
+    height: 20px;
+    color: #979797;
+    margin-top: -2px;
+
+}
+
+.inputContainer .input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    width: 100%;
+
+}
+
+.forgotPasswordContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    
+}
+
+.forgotPasswordContainer .forgotPassword {
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+    color: #C72020;
+    margin-right: 20px;
+}
+
+.loginButtonContainer {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginButtonContainer .loginButton {
+    width: 90%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: #C72020;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+}
+
+.loginButtonContainer .loginButton:hover {
+    cursor: pointer;
+
+}
+
+.orContainer {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.orContainer .or {
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+    color: #979797;
+    text-align: center;
+}
+
+.orLineC .orLine {
+    width: 100%;
+    height: 1px;
+    background-color: #979797;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.orLineC {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+}
+
+.button .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: -2px;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+}
+
+.register {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.register .registerLink {
+    margin-left: 5px;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+    color: #C72020;
+}
+
+.toastContainer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #C72020;
+    color: white;
+    transition: all 0.5s ease;
+    right: -100%;
+    opacity: 0;
+    z-index: 100;
+    margin-top: 30px;
+}
+
+.toastContainer.show {
+    right: 0;
+    opacity: 1;
+}
+
+
+.toast {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toastContainer .toastIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.toast .toastTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+}
+
+.toast .toastText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Public Sans", sans-serif;
+}

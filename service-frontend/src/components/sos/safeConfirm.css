@@ -1,0 +1,71 @@
+.safe-screen {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(180deg,
+      rgb(227, 238, 224) 0%,
+      rgb(29, 137, 44) 31.25%,
+      rgb(42, 196, 63) 68.23%,
+      rgb(243.31, 207.86, 119.63) 100%);
+}
+
+.safe-screen-container {
+  text-align: center;
+  margin: auto;
+  width: 90vw;
+  height: 60vh;
+}
+
+.safe-screen .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.safe-screen .shield-icon {
+  height: 44px;
+  padding-right: 5px;
+}
+
+.safe-screen .text-wrapper-1 {
+  color: #ffffffe6;
+  font-family: "Public Sans-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.safe-screen .teenyicons-tick {
+  height: 22vh;
+  margin: 20px;
+}
+
+.text-wrapper-2 {
+  margin: 20px;
+  color: #f9fafb;
+  font-family: "Public Sans-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 72px;
+}
+
+.text-wrapper-3 {
+  color: #1d892c;
+  font-family: "Public Sans-SemiBold", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.safe-screen .button {
+  background-color: white;
+  border-radius: 16px;
+  margin: 20px;
+  border: 0cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
