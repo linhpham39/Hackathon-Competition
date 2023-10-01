@@ -2,33 +2,97 @@ import './sosForm.css';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { AiOutlineLeft } from 'react-icons/ai';
+import { useEffect } from 'react';
+import { ref, get, push } from 'firebase/database';
+import { auth, database } from '../authentication/firebase'
 const SosForm = () => {
 
     const [selectedTargets, setSelectedTargets] = useState([]);
+    const [location, setLocation] = useState('Đang lấy vị trí...');
+    const thongtin = [
+        'Hỏa hoạn',
+        'Đuối nước',
+        'Tai nạn',
+        'Khác'
+    ]
+
+
+    useEffect(() => {
+        setSelectedTargets([3]);
+        console.log("Getting location");
+        let lat = 0, long = 0;
+        navigator.geolocation.getCurrentPosition((position) => {
+            lat = position.coords.latitude;
+            long = position.coords.longitude;
+            console.log(lat, long);
+            fetch(`http://api.positionstack.com/v1/reverse?access_key=c2320456f45f9af02b7fe8799f41f5f6&query=${lat},${long}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.data.length > 0) {
+                        setLocation(data.data[0].label);
+                    }
+                })
+        })
+
+    }, [])
+
+    const handleSend = () => {
+        let typeSos = thongtin[selectedTargets[0]];
+        console.log(typeSos);
+        let desc = document.getElementById('desc').value;
+        let uid = auth.currentUser.uid;
+        let userdata = ref(database, 'users/' + uid);
+        get(userdata).then((snapshot) => {
+            let email = snapshot.val().email;
+            let name = snapshot.val().name;
+            let phone = snapshot.val().phone;
+            let dbref = ref(database, 'sos_message/' + uid + '/');
+            let lat, long;
+            navigator.geolocation.getCurrentPosition((position) => {
+                lat = position.coords.latitude;
+                long = position.coords.longitude;
+                push(dbref, {
+                    type: typeSos,
+                    desc: desc,
+                    location: location,
+                    time: new Date().toLocaleString(),
+                    phone: phone,
+                    name: name,
+                    lat: lat,
+                    long: long,
+                });
+                window.location.href = '/confirm';
+            });
+            
+        }
+        )
+
+    };
+
+
+
 
     const handleTargetClick = (index) => {
-        console.log('Clicked index:', index);
-        // Toggle selection for the clicked target
-        setSelectedTargets(prevSelectedTargets => {
-            if (prevSelectedTargets.includes(index)) {
-                return prevSelectedTargets.filter(item => item !== index);
-            } else {
-                return [...prevSelectedTargets, index];
-            }
-        });
+        // Turn off other 
+        setSelectedTargets([index]);
+
     };
 
     const isTargetSelected = (index) => {
-        console.log('Is index selected:', index, selectedTargets.includes(index));
         return selectedTargets.includes(index);
     };
 
     return (
         <div className="sosForm">
-            <div className="header">
-                <p>Gửi tín hiệu cầu cứu</p>
+            <div className="senderHeader">
+                <div className="senderHeaderContext">
+                    <Link to='/sender'>
+                        <AiOutlineLeft className="backIcon" />
+                    </Link>
+                    <p>Gửi tín hiệu cầu cứu</p>
+                </div>
             </div>
 
             <div className="locationContainer">
@@ -37,7 +101,7 @@ const SosForm = () => {
                 </div>
                 <div className="location">
                     <p className="locationTitle">Vị trí hiện tại của bạn</p>
-                    <p className="locationDesc">14 Hà Đông, Hà Nội, Việt Nam</p>
+                    <p className="locationDesc">{location}</p>
                 </div>
                 <div className="rightClickIcon">
                     <ChevronRightIcon style={{ fontSize: '40px', color: '#979797' }} />
@@ -61,18 +125,12 @@ const SosForm = () => {
                     </li>
                     <li className={`item ${isTargetSelected(2) ? 'active' : ''}`}>
                         <button onClick={() => handleTargetClick(2)}>
-                            <img src="/earthquake_icon.svg" />
-                            <span>Động đất</span>
+                            <img src="/helmet_icon.svg" />
+                            <span>Tai nạn</span>
                         </button>
                     </li>
                     <li className={`item ${isTargetSelected(3) ? 'active' : ''}`}>
                         <button onClick={() => handleTargetClick(3)}>
-                            <img src="/helmet_icon.svg" />
-                            <span>Bị kẹt</span>
-                        </button>
-                    </li>
-                    <li className={`item ${isTargetSelected(4) ? 'active' : ''}`}>
-                        <button onClick={() => handleTargetClick(4)}>
                             <img src="/warning_icon.svg" />
                             <span>Khác</span>
                         </button>
@@ -80,7 +138,7 @@ const SosForm = () => {
                 </ul>
             </div>
 
-            <div className="target">
+            {/*  <div className="target">
                 <p>Ai đang cần sự giúp đỡ</p>
                 <ul className="listTarget">
                     <li className={`target ${isTargetSelected(5) ? 'active' : ''}`}>
@@ -90,7 +148,7 @@ const SosForm = () => {
                         <button onClick={() => handleTargetClick(6)}>Người khác</button>
                     </li>
                 </ul>
-            </div>
+            </div> */}
 
             <div className="desc">
                 <p>Mô tả thêm (không bắt buộc)</p>
@@ -99,17 +157,11 @@ const SosForm = () => {
                 </textarea>
             </div>
 
-            <div className="submit-img">
-                <button>
-                    <img src="/photo_icon.svg" alt='submitIcon' />
-                    <p className="add-img">Thêm ảnh/ audio</p>
-                </button>
+
+            <div className="submit">
+                <button onClick={handleSend}>Gửi tín hiệu cầu cứu</button>
             </div>
-            <Link to='/confirm'>
-                <div className="submit">
-                    <button >Gửi</button>
-                </div>
-            </Link>
+
         </div>
     )
 }

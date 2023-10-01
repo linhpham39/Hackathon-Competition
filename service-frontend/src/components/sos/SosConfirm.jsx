@@ -11,15 +11,14 @@ const SosConfirm = () => {
             <div className="confirmContainer">
                 <ToggleSos />
                 <Link to="/safe-guide">
-
+                    <h2 className= 'msg'>ĐÃ GỬI TÍN HIỆU CẦU CỨU</h2>
                     <button className="sosButton">
                         <span className="sosTitle">SOS</span>
                     </button>
 
 
                     <div className="sosDecs">
-                        <p>Sau đây là một số hướng dẫn an toàn bạn nên áp dụng
-                            để giải cứu chính mình và mọi người xung quanh
+                        <p>Ấn vào màn hình để xem Hướng Dẫn An Toàn
                         </p>
                     </div>
                 </Link>

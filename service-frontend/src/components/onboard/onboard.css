@@ -19,7 +19,8 @@
 #onboardTitle {
     margin-top: 40px;
     margin-left: 20px;
-    font-size: 1.6rem;
+    margin-right: 20px;
+    font-size: 1.9rem;
     max-height: 30px;
     min-height: 30px;
     transition: all 0.3s ease-in-out;
@@ -29,9 +30,10 @@
 }
 
 #onboardText {
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 0.8rem;
+    margin-top: 30px;
+    margin-left: 23px;
+    margin-right: 20px;
+    font-size: 1rem;
     max-height: 100px;
     min-height: 100px;
     font-weight: 400;

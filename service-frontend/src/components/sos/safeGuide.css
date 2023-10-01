@@ -24,8 +24,8 @@
     margin-left: 20px;
   }
   .safeGuide .guideTitle img{
-    width: 30px;
-    margin-right: 10px;
+    width: 25px;
+    margin-right: 40px;
   }
 /* remove the bullet point */
 .safeGuide .listGuide{
@@ -35,7 +35,7 @@
     border-radius: 10px;
     border: 2px solid #FFF;
     margin: 20px;
-    padding: 10px;
+    padding: 15px;
   }
   .safeGuide .itemGuide img{
     margin-right: 10px;
@@ -46,4 +46,8 @@
   position: absolute;
   bottom: 40px;
     width: 100%;
+}
+.playSound p{
+  margin-top: 6px;
+  font-weight: 200;
 }

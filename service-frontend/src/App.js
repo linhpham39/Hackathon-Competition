@@ -15,7 +15,11 @@ import SafeGuide from './components/sos/SafeGuide';
 import Rescue from './components/rescue/Rescue';
 import Detail from './components/rescue/Detail';
 import SafeConfirm from './components/sos/SafeConfirm';
-
+import Location from './components/sos/Location';
+import Homepage from './components/quizz/Homepage';
+import General from './components/quizz/General';
+import FirstAid from './components/rescue/FirstAid';
+import QuizzDetail from './components/quizz/QuizzDetail';
 function App() {
 
 
@@ -56,8 +60,13 @@ function App() {
         <Route path="/education" element={<Education/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/rescue" element={<Rescue/>} />
-        <Route path='/rescue-detail' element={<Detail/>} />
+        <Route path='/rescue/:userid/:id' element={<Detail/>}/>
+        <Route path='first-aid' element={<FirstAid/>}/> 
         <Route path="/onboard" element={<Onboard/>} />
+        <Route path='/location' element={<Location/>}/>
+        <Route path='/quizz' element={<Homepage/>}/>
+        <Route path='/general' element={<General/>}/>
+        <Route path = '/quizz-detail' element ={<QuizzDetail/>}/>
         <Route path="/" element={<Navigate to="/onboard"/>} />
       </Routes>
     </div>

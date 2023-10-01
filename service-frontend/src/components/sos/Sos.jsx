@@ -6,10 +6,31 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Head from "../head/Head";
 import Nav from "../nav/Nav";
 import Popup from "./Popup";
+import { useEffect } from 'react';
 
 
 const Sos = () => {
     const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
+    const [location, setLocation] = useState('Đang lấy vị trí...');
+    const [name, setName] = useState('Anh/Chị');
+
+    useEffect(() => {
+        console.log("Getting location");
+        let lat = 0, long = 0;
+        navigator.geolocation.getCurrentPosition((position) => {
+            lat = position.coords.latitude;
+            long = position.coords.longitude;
+            console.log(lat, long);
+            fetch(`http://api.positionstack.com/v1/reverse?access_key=c2320456f45f9af02b7fe8799f41f5f6&query=${lat},${long}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.data.length > 0) {
+                        setLocation(data.data[0].label);
+                    }
+                })
+        })
+        
+    }, [])
 
     const handleSosButtonClick = () => {
         setIsConfirmationOpen(true);
@@ -28,7 +49,7 @@ const Sos = () => {
     return (
         <div className="container">
             <div className="sosContainer">
-                <Head />
+                <Head/>
                 <div className="body">
                     <div className="bodyText">
                         <h2 className="title">Bạn có đang gặp nguy hiểm?</h2>
@@ -49,7 +70,7 @@ const Sos = () => {
                         </div>
                         <div className="location">
                             <p className="locationTitle">Vị trí hiện tại của bạn</p>
-                            <p className="locationDesc">14 Hà Đông, Hà Nội, Việt Nam</p>
+                            <p className="locationDesc">{location}</p>
                         </div>
                         <div className="rightClickIcon">
                             <ChevronRightIcon style={{ fontSize: '40px', color: '#979797' }} />

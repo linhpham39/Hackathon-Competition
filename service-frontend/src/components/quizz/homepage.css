@@ -1,0 +1,63 @@
+.subjects {
+    background: var(--Background-1, #F9FAFB);
+}
+
+.subjectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #C72020;
+}
+
+.subjectHeader p {
+    color: #FFF;
+    text-align: center;
+    font-family: Public Sans;
+    font-size: 16px;
+    font-weight: 800;
+    margin-right: 50px;
+}
+
+.subjectBody h1 {
+    color: var(--Secondary-1, #8B1616);
+    font-family: Public Sans;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 20px;
+}
+
+.subjectList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 0px;
+    max-width: 1280px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.subject {
+    margin: 0px 30px 20px 30px;
+    border-radius: 14px;
+    background: #FFF;
+    /* shadow at the bottom and left and write */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subject:active{
+    border:2px solid #C72020;
+}
+
+.subject p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .subjectList {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

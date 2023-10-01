@@ -17,7 +17,7 @@ const Nav = (props) => {
   return (
     <div className="navContainer">
       <ul className="listItems">
-      <Link to="/education">
+      <Link to="/quizz">
           <div
             className={`item ${activeItem === 'education' ? 'active' : ''}`}
             onClick={() => handleItemClick('education')}
