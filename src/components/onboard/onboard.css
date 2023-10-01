@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans");
+
+.childOnboardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.logoHeader {
+    height: 50%;
+    width: 100%;
+    background-image: url("https://img.freepik.com/premium-vector/amazing-virtual-world-digital-art-graphics-science-technology-future-virtual-reality-glasses-metaverse-colorful-planets-space-fantasy-concept-vector-illustrationgenerative-ai_748571-1002.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.logoHeader2{
+    height: 50%;
+    width: 100%;
+    background-image: url("https://img.freepik.com/premium-vector/amazing-virtual-world-digital-art-graphics-science-technology-future-virtual-reality-glasses-metaverse-colorful-planets-space-fantasy-concept-vector-illustrationgenerative-ai_748571-1002.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#onboardTitle {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.9rem;
+    max-height: 30px;
+    min-height: 30px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-family: "Public Sans", bold;
+    margin-bottom: 20px;
+}
+
+#onboardText {
+    margin-top: 30px;
+    margin-left: 23px;
+    margin-right: 20px;
+    font-size: 1rem;
+    max-height: 100px;
+    min-height: 100px;
+    font-weight: 400;
+    font-family: "Public Sans", sans-serif;
+    transition: all 0.3s ease-in-out;
+    font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#onboardProgress {
+    margin-top: 40px;
+    width: 100%;
+    height: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+#onboardProgressBar {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background-color: #979797;
+    border-radius: 10px;
+}
+
+#onboardProgressFill {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    left: 0%;
+    background-color: #C72020;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.onboardButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.onboardButton {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "Public Sans", sans-serif;
+    cursor: pointer;
+    background-color: #C72020;
+    color: #fff;
+}

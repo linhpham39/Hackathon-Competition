@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans");
+.sosForm {
+    background: #F9FAFB;
+}
+.sosForm .heading {
+                    display: flex;
+                    background: #C72020;
+                    color: #FFF;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 27px;
+                    width: 100%;
+                    height: 80px;
+                    /* display: grid; */
+                    place-items: center;
+                    /* text-align: center; */
+                
+                }
+                .sosForm .heading svg{
+                    flex: 1;
+                    font-size: 40px !important;
+                    padding: 20px;
+                
+                }
+                .sosForm .heading p{
+                    flex: 3;
+                    width: 80%;
+                    text-align: center;
+                }
+
+.locationContainer {
+    margin: 20px 20px 10px 20px;
+    padding: 20px;
+    background-color: rgb(97, 97, 97, 0.1);
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.locationIcon {
+    flex: 1;
+
+}
+
+.locationIcon svg {
+    font-size: 30px !important;
+}
+
+.locationContainer {
+    margin: 20px 20px 10px 20px;
+    padding: 20px;
+    background-color: rgb(97, 97, 97, 0.1);
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.locationIcon {
+    flex: 1;
+
+}
+
+.locationIcon svg {
+    font-size: 30px !important;
+}
+
+.location {
+    flex: 5;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rightClickIcon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.locationTitle {
+    color: #5f5c5c;
+    font-weight: 600;
+
+}
+
+.locationDesc {
+    font-weight: bold;
+    color: #2b2a2a;
+}
+
+/* bạn đang gặp vấn đề liên quan đến*/
+.typesos,
+.target {
+    margin: 20px 20px 10px 20px;
+    color: #000;
+    font-family: Public Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.typesos p {
+    font-family: "Public Sans", sans-serif;
+    font-weight: bold;
+    color: #2b2a2a;
+}
+
+.listTypeSos {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.item {
+    position: relative;
+}
+
+.item button {
+    font-family: "Public Sans", sans-serif;
+    border-radius: 12px;
+    border: 1.5px solid #D7D7D7;
+    background: #F9FAFB;
+    width: 110px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 15px;
+    margin: 5px;
+    padding-right: 3px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.item button span {
+    margin-left: 30%;
+    width: 90%;
+    display: inline-block;
+    text-align: start;
+    color: black;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
+}
+
+.item img {
+    position: absolute;
+    width: 12px;
+    left: 15%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.typesos .active button {
+    border: 1.5px solid #C72020;
+    background: #C72020;
+    color: #FFF;
+}
+
+.typesos .active button span {
+    color: #FFF;
+}
+
+.target p {
+    font-weight: bold;
+    color: #2b2a2a;
+    font-family: "Public Sans", sans-serif;
+}
+
+.listTarget {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.target button {
+    border-radius: 12px;
+    border: 1.5px solid #D7D7D7;
+    background: #F9FAFB;
+    width: 107px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 15px;
+    margin-left: -15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.target li.active button {
+    border: 1.5px solid #C72020;
+    background: #C72020;
+    color: #FFF;
+    transform: scale(1.02);
+}
+
+.sosForm .desc {
+    margin: 20px 20px 10px 20px;
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sosForm .desc p {
+
+    font-weight: bold;
+    font-family: "Public Sans", sans-serif;
+    color: #2b2a2a;
+}
+
+.sosForm .desc textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 6px;
+    border: 1.5px solid #D7D7D7;
+    background: rgba(151, 151, 151, 0.20);
+    font-family: "Public Sans", sans-serif;
+    margin-top: 15px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.sosForm .submit-img {
+    border-radius: 8px;
+    border: 1.5px dashed var(--Background-2, #979797);
+    background: #FFF;
+    /* width: 100%; */
+    margin: 20px 20px 10px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.sosForm .submit-img button {
+    background: none;
+    border: none;
+}
+
+.sosForm .submit {
+    text-align: center;
+    
+}
+
+.sosForm .submit button {
+    border: 1.5px solid #C72020;
+    background: #C72020;
+    color: #FFF;
+    border-radius: 12px;
+    width: 308px;
+    height: 50px;
+    font-size: 20.533px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 20px;
+}

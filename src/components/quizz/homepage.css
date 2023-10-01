@@ -1,0 +1,143 @@
+.subjects {
+	background: var(--Background-1, #f9fafb);
+}
+
+.subjectHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background: #c72020;
+}
+
+.subjectHeader p {
+	color: #fff;
+	text-align: center;
+	font-family: Public Sans;
+	font-size: 16px;
+	font-weight: 800;
+	margin-right: 50px;
+}
+
+.subjectBody h1 {
+	color: var(--Secondary-1, #8b1616);
+	font-family: Public Sans;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 22px;
+	margin: 20px;
+}
+
+.subjectList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 0px;
+	max-width: 1280px;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.subject {
+	margin: 0px 30px 20px 30px;
+	border-radius: 14px;
+	background: #fff;
+	/* shadow at the bottom and left and write */
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subject:active {
+	border: 2px solid #c72020;
+}
+
+.subject p {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 800;
+	margin-top: -10px;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+	.subjectList {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+}
+
+.subjectPopup {
+	width: 100%;
+	height: 100%;
+	background: white;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.choiceContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 15px;
+    margin-top: -140px;
+    margin-left: 20px
+}
+
+.choiceContainerColor {
+	width: 329.28px;
+	height: 46.08px;
+	
+	position: absolute;
+	background-color: #c72020;
+	border-radius: 15px;
+}
+
+.choiceContent {
+	width: 298.56px;
+	height: 19.75px;
+	position: absolute;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: Inter;
+	font-weight: 700;
+	line-height: 24px;
+	word-wrap: break-word;
+}
+
+.contentAbove {
+    left: 30.36px;
+	top: 13.44px;
+
+}
+
+.colorAbove {
+    left: 15px;
+	top: 0px;
+}
+
+.contentBelow {
+    left: 30.36px;
+	top: 83.44px;
+
+}
+
+.colorBelow {
+    left: 15px;
+	top: 70px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 65%; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    font-size: 20px; /* Adjust the font size as needed */
+    color: black; /* Close icon color */
+    cursor: pointer;
+}
+
