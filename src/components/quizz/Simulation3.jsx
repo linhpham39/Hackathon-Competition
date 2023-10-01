@@ -2,7 +2,7 @@ import './simulation.css'
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 
-const Simulation = () => {
+const Simulation3 = () => {
   return (
     <div className="simulation">
       <div className="senderHeader">
@@ -19,31 +19,31 @@ const Simulation = () => {
       </div>
       <div className="dot-simulation">
         <img className='dot-1' src='/red-dot_icon.svg'></img>
-        <img className='dot-2' src='/white-dot_icon.svg'></img>
+        <img className='dot-2' src='/red-dot_icon.svg'></img>
         <img className='dot-3' src='/red-dot_icon.svg'></img>
-        <img className='dot-4' src='/red-dot_icon.svg'></img>
+        <img className='dot-4' src='/white-dot_icon.svg'></img>
       </div>
 
       <div className="simulationContent">
         <h2>Mô tả</h2>
         <hr></hr>
         <p className="content">
-          Sử dụng chăn/khăn có trong nhà, tẩm ướt trùm lên người, che kín mắt, mũi miệng.
+        Không nên trốn vào nơi kín, tìm cách thoát hiểm
         </p>
-    
+
 
         <div className="simulationbtn">
-          <Link to='/simulation'>
+          <Link to='/simulation2'>
             <button>
               <img src='/back_icon.svg'></img>
               Trước
             </button>
           </Link>
+          <img src='/grey-dot_icon.svg'></img>
+          <img src='/grey-dot_icon.svg'></img>
           <img src='/red-dot_icon.svg'></img>
           <img src='/grey-dot_icon.svg'></img>
-          <img src='/grey-dot_icon.svg'></img>
-          <img src='/grey-dot_icon.svg'></img>
-          <Link to='/simulation2'>
+          <Link to='/simulation4'>
           <button>
             Sau
             <img src='/white-next_icon.svg'></img>
@@ -56,4 +56,4 @@ const Simulation = () => {
   )
 }
 
-export default Simulation;
+export default Simulation3;

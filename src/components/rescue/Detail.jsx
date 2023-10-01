@@ -7,12 +7,12 @@ const Detail = () => {
     const victims = [
         {
             id: 1,
-            name: "Nguyễn Văn A",
+            name: "Huỳnh Khánh Linh",
             type: "Hỏa hoạn",
             phone: "0123456789",
-            location: "14 Đống Đa, Hà Nội, Việt Nam",
-            time: "2 phút trước",
-            desc: "Tôi đang ở tầng 10, trong phòng tôi có cửa sổ và ban công, xin hãy giúp tôi!",
+            location: "18 Đ.Tam Trinh, Mai Động, Hai Bà Trưng, Hà Nội, Việt Nam",
+            time: "1 phút trước",
+            desc: "Tôi đang gặp hỏa hoạn ở tầng 26, cứu tôi!",
             distance: "0.5 km"
         },
         {
@@ -20,7 +20,7 @@ const Detail = () => {
             name: "Nguyễn Văn B",
             type: "Hỏa hoạn",
             phone: "0123456789",
-            location: "14 Đống Đa, Hà Nội, Việt Nam",
+            location: "Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội, Việt Nam",
             time: "2 phút trước",
             desc: "Tôi đang ở tầng 10, trong phòng tôi có cửa sổ và ban công, xin hãy giúp tôi!",
             distance: "0.5 km"
@@ -29,7 +29,7 @@ const Detail = () => {
             id: 3,
             name: "Nguyễn Văn C",
             type: "Bị kẹt",
-            location: "14 Đống Đa, Hà Nội, Việt Nam",
+            location: "Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội, Việt Nam",
             time: "15 phút trước",
             distance: "3 km",
             desc: "Tôi đang bị bắt cóc, xin hãy giúp tôi!",

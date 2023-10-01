@@ -22,6 +22,9 @@ import FirstAid from './components/rescue/FirstAid';
 import QuizzDetail from './components/quizz/QuizzDetail';
 import Simulation0 from './components/quizz/Simulation0';
 import Simulation1 from './components/quizz/Simulation1';
+import Simulation2 from './components/quizz/Simulation2';
+import Simulation3 from './components/quizz/Simulation3';
+import Simulation4 from './components/quizz/Simulation4';
 function App() {
 
 
@@ -71,6 +74,9 @@ function App() {
         <Route path='/general' element={<General/>}/>
         <Route path = '/quizz-detail' element ={<QuizzDetail/>}/>
         <Route path='/simulation' element={<Simulation0 />} />
+        <Route path='/simulation2' element={<Simulation2 />} />
+        <Route path='/simulation3' element={<Simulation3 />} />
+        <Route path='/simulation4' element={<Simulation4 />} />
         <Route path= '/simulation-detail' element={<Simulation1/>}/>
         <Route path="/" element={<Navigate to="/onboard"/>} />
       </Routes>

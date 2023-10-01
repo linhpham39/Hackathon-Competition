@@ -19,8 +19,8 @@ const Simulation2 = () => {
       </div>
       <div className="dot-simulation">
         <img className='dot-1' src='/red-dot_icon.svg'></img>
-        <img className='dot-2' src='/white-dot_icon.svg'></img>
-        <img className='dot-3' src='/red-dot_icon.svg'></img>
+        <img className='dot-2' src='/red-dot_icon.svg'></img>
+        <img className='dot-3' src='/white-dot_icon.svg'></img>
         <img className='dot-4' src='/red-dot_icon.svg'></img>
       </div>
 
@@ -28,27 +28,27 @@ const Simulation2 = () => {
         <h2>Mô tả</h2>
         <hr></hr>
         <p className="content">
-          Sử dụng chăn/khăn có trong nhà, tẩm ướt trùm lên người, che kín mắt, mũi miệng.
+        Cuối thấp người, bò sát mặt đất để di chuyển để tránh hít khói độc
         </p>
-        <p className="content">
-          Chèn vào cửa
-        </p>
+        
 
         <div className="simulationbtn">
-          <Link to='/simulation'>
+          <Link to='/simulation-detail'>
             <button>
               <img src='/back_icon.svg'></img>
               Trước
             </button>
           </Link>
+          <img src='/grey-dot_icon.svg'></img>
           <img src='/red-dot_icon.svg'></img>
           <img src='/grey-dot_icon.svg'></img>
           <img src='/grey-dot_icon.svg'></img>
-          <img src='/grey-dot_icon.svg'></img>
-          <button>
-            Sau
-            <img src='/white-next_icon.svg'></img>
-          </button>
+          <Link to = '/simulation3'>
+            <button>
+                Sau
+                <img src='/white-next_icon.svg'></img>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
